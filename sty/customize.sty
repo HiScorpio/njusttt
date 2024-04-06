@@ -14,6 +14,7 @@
 \usepackage{fontspec}                               % fontspec package
 \defaultfontfeatures{Ligatures=TeX}                 % use tex style to support LaTeX quoting style
 \setmainfont[BoldFont=Times New Roman-Bold, ItalicFont=Times New Roman-Italic]{Times New Roman}         % determine \rmfamily
+\xeCJKsetup{CJKecglue={\hskip 0pt plus 0.08\baselineskip}}      % get rid of the extra space between parencite and Chinese characters
 
 
 
@@ -63,6 +64,7 @@
 
 % reference
 \usepackage[backend=biber, style=numeric, sorting=none, gbpub=false, bibstyle=gb7714-2015, citestyle=gb7714-2015, gbnamefmt=lowercase]{biblatex}
+\xeCJKsetup{CJKecglue={\hskip 0pt plus 0.08\baselineskip}}
 \addbibresource[location=local]{ref/ch1.bib}
 \addbibresource[location=local]{ref/ch2.bib}
 \addbibresource[location=local]{ref/ch3.bib}
