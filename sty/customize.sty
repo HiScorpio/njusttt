@@ -46,6 +46,15 @@
 \usepackage{amsmath,amssymb,amstext}
 
 
+% theorem
+\usepackage{amsthm}
+\newtheorem{theorem}{定理}[chapter]
+\newtheorem{lemma}{引理}[chapter]
+\newtheorem{remark}{注}[chapter]
+\newtheorem{property}{性质}[chapter]
+\newtheorem{definition}{定义}[chapter]
+
+
 
 % algorithm
 \usepackage{algorithm}
@@ -114,10 +123,10 @@
     pdffitwindow=false,                             % window fit to page when opened
     pdfstartview={FitH},                            % fits the width of the page to the window
     colorlinks=true,                                % false: boxed links; true: colored links
-    linkcolor=black,                                % color of internal links
-    citecolor=black,                                % color of links to bibliography
-    filecolor=black,                                % color of file links
-    urlcolor=black                                  % color of external links
+    linkcolor=blue,                                % color of internal links
+    citecolor=blue,                                % color of links to bibliography
+    filecolor=blue,                                % color of file links
+    urlcolor=blue                                  % color of external links
 }
 
 
@@ -143,8 +152,11 @@
 \makenomenclature
 \renewcommand*\nompreamble{\begin{multicols}{2}}
         \renewcommand*\nompostamble{\end{multicols}}
-\providecommand{\nomenclatureitem}[3][ ]{           % abbreviations columns
-    \noindent\makebox[0.25\textwidth][l]{#2}{{#3}\hfill{#1}}\par
+\providecommand{\nomenclatureitem}[4][ ]{           % abbreviations columns
+    \noindent\makebox[0.2\textwidth][l]{#2}
+	\parbox[t]{0.4\textwidth}{#3}   
+	\hspace{#4}                
+    \parbox[t]{0.3\textwidth}{\raggedright #1}\par
 }
 
 
@@ -156,3 +168,4 @@
 
 
 \endinput
+
